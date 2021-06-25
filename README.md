@@ -1,37 +1,84 @@
-## Welcome to GitHub Pages
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="/font-awesome-4.7.0/css/font-awesome.min.css">
+  <link rel="shortcut icon" href="/dist/favicon/favicon.ico" type="image/x-icon">
+  <title>Austin Spraggins Portfolio</title>
+</head>
+<body>
+  <header>
+    <div class="menu-btn">
+      <span class="menu-btn__burger"></span>
+    </div>
 
-You can use the [editor on GitHub](https://github.com/Atmosphere9999/austinspragginsportfoliopage/edit/Shadow-Gaming-Main/README.md) to maintain and preview the content for your website in Markdown files.
+    <nav class="nav">
+      <ul class="menu-nav">
+        <li class="menu-nav__item active">
+          <a href="index.html" class="menu-nav__link">
+            Home
+          </a>
+        </li>
+        <li class="menu-nav__item">
+          <a href="about.html" class="menu-nav__link">
+            About Me
+          </a>
+        </li>
+        <li class="menu-nav__item">
+          <a href="projects.html" class="menu-nav__link">
+            My Projects
+          </a>
+        </li>
+        <li class="menu-nav__item">
+          <a href="contact.html" class="menu-nav__link">
+            Contact Me
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+  <main>
+    <section class="home">
+      <h2>Welcome To My Porfolio</h2>
+      <h1 class="home__name">
+        Austin <span class="home__name--last">Spraggins</span>
+      </h1>
+      <h2>
+        Frontend Web Designer & Developer.<br>
+        Content Creator.<br>
+        Husband & Father.<br>
+      </h2>
 
-### Markdown
+      <div class="social-icons">
+        <a href="https://twitter.com/Shadow_Gaming99">
+          <i class="fab fa-twitter fa-2x"></i>
+        </a>
+        <a href="https://www.facebook.com/shadowgamingproductions">
+          <i class="fab fa-facebook fa-2x"></i>
+        </a>
+        <a href="https://www.instagram.com/agentshadowgaming/">
+          <i class="fab fa-instagram fa-2x"></i>
+        </a>
+        <a href="https://github.com/Atmosphere9999">
+          <i class="fab fa-github fa-2x"></i>
+        </a>
+        <a href="https://www.youtube.com/channel/UCG33v2g2KT3hXXWLLbCFBcA">
+          <i class="fab fa-youtube fa-2x"></i>
+        </a>
+        <a href="https://www.shadowgaming.network">
+          <i class="fa fa-user fa-2x" aria-hidden="true"></i>
+        </a>
+      </div>
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+      <footer>&copy; Copyright 2021</footer>
+    </section>
+  </main>
 
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/Atmosphere9999/austinspragginsportfoliopage/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+  <script src="https://kit.fontawesome.com/6d2ea823d0.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
