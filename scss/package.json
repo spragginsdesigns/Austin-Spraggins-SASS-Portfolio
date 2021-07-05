@@ -5,13 +5,14 @@
   "main": "main.scss",
   "scripts": {
     "test": "sass"
+    "compile": "node-sass sass/main.scss css/main.css" }
   },
   "repository": {
     "type": "git",
-    "url": "hello"
+    "url": "www.austinspragginsportfolio.xyz"
   },
   "keywords": [
-    "edf"
+    "Compile SASS"
   ],
   "author": "Austin",
   "license": "ISC"
