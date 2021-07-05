@@ -87,7 +87,7 @@
       @include transition-ease;
 
       &.open {
-       transform: translateX(0); 
+       transform: translateX(0);
       }
 
       &.active > a {
