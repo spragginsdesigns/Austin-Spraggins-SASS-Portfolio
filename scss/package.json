@@ -4,8 +4,8 @@
   "description": "SASS Package",
   "main": "main.scss",
   "scripts": {
-    "test": "sass"
-    "compile": "node-sass sass/main.scss css/main.css" }
+    "test": "sass",
+    "compile": "node-sass sass/main.scss css/main.css"
   },
   "repository": {
     "type": "git",
