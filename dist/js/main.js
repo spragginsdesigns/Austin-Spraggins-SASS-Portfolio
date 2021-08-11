@@ -25,14 +25,50 @@ function toggleMenu() {
     showMenu = false;
   }
 }
-document.write(new Date().getTime());
 
-  // Create a JavaScript Date object for the current date and time, and set the desired options.
-  var date = new Date(),
-      options = { weekday: "long", month: "long", day: "numeric", year: "numeric" };
+// play on load for gallery view
+setTimeout(transition, 1000);
 
-  // Convert to locale string and add a locale and the options
-  date = date.toLocaleString( "en-US", options );
+$('.js-trigger-transition').on('click', function(e) {
+  e.preventDefault();
+  transition();
+});
 
-  // Output the date to the above HTML element
-  document.getElementById("msg").innerHTML = date;
+function transition() {
+
+  var tl = new TimelineMax();
+
+  tl.to(CSSRulePlugin.getRule('body:before'), 0.2, {cssRule: {top: '50%' }, ease: Power2.easeOut}, 'close')
+  .to(CSSRulePlugin.getRule('body:after'), 0.2, {cssRule: {bottom: '50%' }, ease: Power2.easeOut}, 'close')
+  .to($('.loader'), 0.2, {opacity: 1})
+  .to(CSSRulePlugin.getRule('body:before'), 0.2, {cssRule: {top: '0%' }, ease: Power2.easeOut}, '+=1.5', 'open')
+  .to(CSSRulePlugin.getRule('body:after'), 0.2, {cssRule: {bottom: '0%' }, ease: Power2.easeOut}, '-=0.2', 'open')
+  .to($('.loader'), 0.2, {opacity: 0}, '-=0.2');
+}
+
+const getTitle = async page => {
+  const title = await page.evaluate(() => {
+    const ogTitle = document.querySelector('meta[property="og:title"]');
+    if (ogTitle != null && ogTitle.content.length > 0) {
+      return ogTitle.content;
+    }
+    const twitterTitle = document.querySelector('meta[name="twitter:title"]');
+    if (twitterTitle != null && twitterTitle.content.length > 0) {
+      return twitterTitle.content;
+    }
+    const docTitle = document.title;
+    if (docTitle != null && docTitle.length > 0) {
+      return docTitle;
+    }
+    const h1 = document.querySelector("h1").innerHTML;
+    if (h1 != null && h1.length > 0) {
+      return h1;
+    }
+    const h2 = document.querySelector("h1").innerHTML;
+    if (h2 != null && h2.length > 0) {
+      return h2;
+    }
+    return null;
+  });
+  return title;
+};
